@@ -1,0 +1,346 @@
+<style>
+    #contactReason {
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      width: 100%; /* Ensures the select box doesn't exceed its parent container */
+      max-width: 500px; /* Matches your design spec */
+      padding: 10px 20px; /* Adjusted for a better visual fit for select */
+      position: relative;
+      border-radius: 5px;
+      border: none; /* Optional: removes the default border */
+      appearance: none; /* Removes the default system appearance */
+      -webkit-appearance: none; /* For Safari */
+    }
+    
+    /* Positioning an icon inside the select box requires an outer wrapper */
+    .contact-reason-select-wrapper {
+      position: relative;
+      max-width: 500px;
+      margin: 20px auto;
+     display: flex; /* Enables flexbox layout */
+      align-items: center; /* Centers items vertically */
+      justify-content: center; /* Centers items horizontally */
+    }
+    
+    /* To position the icon relative to the wrapper */
+    .contact-reason-select-wrapper::after {
+      content: '';
+      background-image: url('/wp-content/uploads/2024/02/contact-reason-icon.svg');
+      position: absolute;
+      right: 20px;
+      width: 24px; /* Adjust based on your icon size */
+      height: 24px; /* Adjust based on your icon size */
+      pointer-events: none; /* Ensures the dropdown can still be interacted with */
+    }
+    
+
+/* Define the animation */
+@keyframes fadeInAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* When the show class is added, display the block and start the animation */
+.details-container.show {
+  display: block;
+  animation: fadeInAnimation 0.5s ease forwards;
+}
+
+    </style>
+    
+    
+    <div class="breadcrumb pt-2 pb-2">
+    <div class="container custom-nav-container">
+    <div class="row justify-content-center justify-content-md-start">
+    <div class="col-auto ms-lg-3"><span class="mb-0 customp">[rank_math_breadcrumb]</span></div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="container sectionspace2">
+    <div class="row justify-content-center m-2">
+    <div class="col-lg-12 box-g box-500 gr-box" style="display: flex; flex-direction: column; align-items: stretch;">
+    <div class="row align-items-center" style="flex: 1;">
+    <div class="col-lg-6 p-4 text-center order-lg-1 order-1" >
+    <p class="regwhite"><b>Contact us</b></p>
+    <h1 class="boldwhite p4vh">Get help, find answers</h1>
+    
+    <div class="contact-reason-select-wrapper">
+      <select id="contactReason" class="form-control">
+      <option value="">How can we help?</option>
+      <option value="new">I want to become a private patient</option>
+      <option value="current">I'm already a patient</option>
+      <option value="fromanicb">I'm from an ICB</option>
+      <option value="referral">I want to check the status of a referral</option>
+      <option value="gpreferral">I'm a GP and want to refer a patient</option>
+      <option value="recruitment">I want to work at ADHD 360</option>
+      <option value="shortage">National medication shortage</option>
+      <option value="invoiceenquiry">I have an invoice enquiry</option>
+    </select>
+    </div>
+    
+    
+    </div>
+    <div class="col-lg-6 p-4 p-md-3 pe-md-5 order-lg-2 order-2">
+    <img src="/wp-content/uploads/2024/02/Contact-us.webp" alt="ADHD 360 Contact Us" title="ADHD 360 Contact Us" width="570" height="501"/>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    <div id="new" class="details-container" style="display: none;">
+    <!-- Livechat box with button -->
+    <div class="container sectionspace2">
+      <div class="row g-4">
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+    <div class="row justify-content-between">
+          <div class="col-lg-7 col-md-3 d-flex align-items-center p-0" style="background-color: #008080; border-top-right-radius: 15px; border-bottom-right-radius: 15px; margin-left: -35px;">
+            <img src="/wp-content/uploads/2024/02/uil_clock.svg" alt="Fastest Response" title="Fast response via livechat" style="width: 20px; height: 20px; margin-left: 35px">      
+            <span class="text-white ms-2">Fastest response</span>
+    </div>
+        <div class="col-lg-5 col-md-3 d-flex justify-content-end">
+          <img src="/wp-content/uploads/2024/02/mdi_chat-outline.svg" alt="Livechat Icon" title="Contact us via Livechat" style="width: 56px; height: 56px;">
+    </div>
+      </div>
+          <h3 class="brandgradient pt-4">Live Chat</h3>
+          <p>Live chat is the quickest way to get your query solved!</p>
+          <p class="mb-1"><strong>Our live chat operating hours:</strong></p>
+          <p class="mb-1"><strong>Mon-Fri:</strong> 9am - 7pm</p>
+          <p><strong>Saturday:</strong> 10am - 4pm</p>
+           <button type="button" class="mt-4 whipubutton">Chat with us</button>
+    </div>
+    </div>
+    
+    <!-- Get in touch box w. Email and phone -->
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+          <h3 class="brandgradient">Get in touch</h3>
+          <p class="regdark">To speak to our team you can also use the below contact details</p>
+    <p class="mb-1"><strong>Secure email:</strong></p>
+    <div class="d-flex align-items-start">
+          <img src="/wp-content/uploads/2024/02/Contact-us-via-Email.svg" alt="Email us Icon" title="Contact us via Email" style="margin: 5px; width: 24px; height: 24px;"><p>nhspartners@adhd-360.com</p>
+    
+    </div>
+    <p class="mb-1"><strong>Phone:</strong>
+    <div class="d-flex align-items-start">
+          <img src="/wp-content/uploads/2024/02/Contact-us-via-Phone-icon.svg" alt="Phone us Icon" title="Contact us via Phone" style="margin: 5px; width: 24px; height: 24px;"><p>01507 534 181</p>
+    </div>
+    <p class="mb-1">Our phone line operating hours:</p>
+          <p class="mb-1"><strong>Mon-Fri:</strong> 9am - 7pm</p>
+          <p><strong>Saturday:</strong> 10am - 4pm</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- end of dropdown section -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="current" class="details-container" style="display: none;">
+    <!-- Live chat box W. Button & Banner -->
+    <div class="container sectionspace2">
+      <div class="row g-4">
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+    <div class="row justify-content-between">
+          <div class="col-lg-7 col-md-3 d-flex align-items-center p-0" style="background-color: #008080; border-top-right-radius: 15px; border-bottom-right-radius: 15px; margin-left: -35px;">
+            <img src="/wp-content/uploads/2024/02/uil_clock.svg" alt="Fastest Response" title="Fast response via livechat" style="width: 20px; height: 20px; margin-left: 35px">      
+            <span class="text-white ms-2">Fastest response</span>
+    </div>
+        <div class="col-lg-5 col-md-3 d-flex justify-content-end">
+          <img src="/wp-content/uploads/2024/02/mdi_chat-outline.svg" alt="Livechat Icon" title="Contact us via Livechat" style="width: 56px; height: 56px;">
+    </div>
+      </div>
+          <h3 class="brandgradient pt-4">Live Chat</h3>
+          <p>Live chat is the quickest way to get your query solved!</p>
+          <p class="mb-1"><strong>Our live chat operating hours:</strong></p>
+          <p class="mb-1"><strong>Mon-Fri:</strong> 9am - 7pm</p>
+          <p><strong>Saturday:</strong> 10am - 4pm</p>
+           <button type="button" class="mt-4 whipubutton">Chat with us</button>
+    </div>
+    </div>
+    
+    
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+          <h3 class="brandgradient">Get in touch</h3>
+          <p class="regdark">Please fill in the below form and one of the team will be in touch soon!</p>
+    [contact-form-7 id="7707267" title="Contact form 1"]
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- end of dropdown section -->
+    
+    
+    
+    <div id="fromanicb" class="details-container" style="display: none;">
+    <!-- Livechat box with button -->
+    <div class="container sectionspace2">
+      <div class="row g-4">
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+    <div class="row justify-content-between">
+          <div class="col-lg-7 col-md-3 d-flex align-items-center p-0" style="background-color: #008080; border-top-right-radius: 15px; border-bottom-right-radius: 15px; margin-left: -35px;">
+            <img src="/wp-content/uploads/2024/02/uil_clock.svg" alt="Fastest Response" title="Fast response via livechat" style="width: 20px; height: 20px; margin-left: 35px">      
+            <span class="text-white ms-2">Fastest response</span>
+    </div>
+        <div class="col-lg-5 col-md-3 d-flex justify-content-end">
+          <img src="/wp-content/uploads/2024/02/mdi_chat-outline.svg" alt="Livechat Icon" title="Contact us via Livechat" style="width: 56px; height: 56px;">
+    </div>
+      </div>
+          <h3 class="brandgradient pt-4">Live Chat</h3>
+          <p>Live chat is the quickest way to get your query solved!</p>
+          <p class="mb-1"><strong>Our live chat operating hours:</strong></p>
+          <p class="mb-1"><strong>Mon-Fri:</strong> 9am - 7pm</p>
+          <p><strong>Saturday:</strong> 10am - 4pm</p>
+           <button type="button" class="mt-4 whipubutton">Chat with us</button>
+    </div>
+    </div>
+    
+    <!-- Get in touch box w. Email and phone -->
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+          <h3 class="brandgradient">Get in touch</h3>
+          <p class="regdark">To speak to our team you can also use the below contact details</p>
+    <p class="mb-1"><strong>Secure email:</strong></p>
+    <div class="d-flex align-items-start">
+          <img src="/wp-content/uploads/2024/02/Contact-us-via-Email.svg" alt="Email us Icon" title="Contact us via Email" style="margin: 5px; width: 24px; height: 24px;"><p>nhspartners@adhd-360.com</p>
+    
+    </div>
+    <p class="mb-1"><strong>Phone:</strong>
+    <div class="d-flex align-items-start">
+          <img src="/wp-content/uploads/2024/02/Contact-us-via-Phone-icon.svg" alt="Phone us Icon" title="Contact us via Phone" style="margin: 5px; width: 24px; height: 24px;"><p>01507 534 181</p>
+    </div>
+    <p class="mb-1">Our phone line operating hours:</p>
+          <p class="mb-1"><strong>Mon-Fri:</strong> 9am - 7pm</p>
+          <p><strong>Saturday:</strong> 10am - 4pm</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- end of dropdown section -->
+    
+    
+    
+    <div id="referral" class="details-container" style="display: none;">
+    <!-- Live chat box W. Button & Banner -->
+    <div class="container sectionspace2">
+      <div class="row g-4">
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+    <div class="row justify-content-between">
+          <div class="col-lg-7 col-md-3 d-flex align-items-center p-0" style="background-color: #008080; border-top-right-radius: 15px; border-bottom-right-radius: 15px; margin-left: -35px;">
+            <img src="/wp-content/uploads/2024/02/uil_clock.svg" alt="Fastest Response" title="Fast response via livechat" style="width: 20px; height: 20px; margin-left: 35px">      
+            <span class="text-white ms-2">Fastest response</span>
+    </div>
+        <div class="col-lg-5 col-md-3 d-flex justify-content-end">
+          <img src="/wp-content/uploads/2024/02/mdi_chat-outline.svg" alt="Livechat Icon" title="Contact us via Livechat" style="width: 56px; height: 56px;">
+    </div>
+      </div>
+          <h3 class="brandgradient pt-4">Live Chat</h3>
+          <p>Live chat is the quickest way to get your query solved!</p>
+          <p class="mb-1"><strong>Our live chat operating hours:</strong></p>
+          <p class="mb-1"><strong>Mon-Fri:</strong> 9am - 7pm</p>
+          <p><strong>Saturday:</strong> 10am - 4pm</p>
+           <button type="button" class="mt-4 whipubutton">Chat with us</button>
+    </div>
+    </div>
+    
+    
+    <div class="col-lg-6 d-flex">
+    <div class="box-g box-500 squarebcon1 m-0">
+          <h3 class="brandgradient">Get in touch</h3>
+          <p class="regdark">Please fill in the below form and one of the team will be in touch soon!</p>
+    [contact-form-7 id="7707267" title="Contact form 1"]
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- end of dropdown section -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- conditional script -->
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var selectElement = document.getElementById('contactReason');
+
+  selectElement.addEventListener('change', function () {
+    // Debugging line: Log the selected value
+    console.log("Selected value: ", this.value);
+
+    // Hide all containers and reset any previous animations
+    var containers = document.querySelectorAll('.details-container');
+    console.log("All container IDs: "); // Debugging line
+
+    containers.forEach(function (container) {
+      console.log(container.id); // Debugging line: Log each container's ID
+      container.style.display = 'none'; // Ensure all containers are not displayed
+      container.classList.remove('show'); // Remove the show class
+    });
+
+    // Show the selected container with fade-in effect
+    var selectedContainer = document.getElementById(this.value);
+
+    // Debugging line: Log the targeted container
+    console.log("Targeted container: ", selectedContainer);
+
+    if (selectedContainer) {
+      selectedContainer.style.display = 'block'; // First, set display to block
+      // Use requestAnimationFrame to ensure the display change has taken effect
+      requestAnimationFrame(() => {
+        selectedContainer.classList.add('show'); // Then, add the show class to start animation
+      });
+    } else {
+      // Debugging line: Log if no container was found for the selected value
+      console.log("No container found for the value: ", this.value);
+    }
+  });
+});
+
+
+    </script>
+    
+    </body>
